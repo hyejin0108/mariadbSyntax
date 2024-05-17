@@ -26,13 +26,14 @@ CREATE TABLE posts(
     title VARCHAR(255),
     content VARCHAR(255),
     author_id INT,
-    PRIMARY KEY(id)
+    PRIMARY KEY(id),
     foreign key(author_id) references author(id)
 );
 
 --테이블 컬럼 조회
 DESCRIBE author;
+--컬럼 상세조회
+SHOW FULL columns FROM author;
 
 --테이블 생성문 조회
 show CREATE table author;
-
