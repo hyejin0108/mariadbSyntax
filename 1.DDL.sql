@@ -37,3 +37,6 @@ SHOW FULL columns FROM author;
 
 --테이블 생성문 조회
 show CREATE table author;
+
+--외래키 : not null, unique 아님
+--fk delete, update restrict ->set null(null 셋), cascade(둘다 삭제)
