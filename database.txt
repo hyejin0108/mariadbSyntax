@@ -1,0 +1,20 @@
+blob -> 바이너리로 변환후 저장
+storage -> storage에 저장후 path 저장
+elastic cache > 지식관리서비스
+
+분산 db - uuid 활용
+
+cascade - 같이 삭제 변경
+set null - null 셋팅
+restrict - 에러
+
+트랜잭션 - 두 쿼리가 하나의 쿼리처럼 동작해야할때 묶은 것
+트랜잭션 확정 commit, 되돌리기 rollback
+
+동시성이슈
+- 더티리드 : 커밋 안된걸 읽을 수 있을때, 격리수준 read uncommited => read commited 업그레이드
+
+- 나의 트랜잭션 수행중 다른 트랜잭션이 insert시, 결과가 달라졌을 경우 > phantom read, non-repeatable read
+	격리수준 read-commited  => repeatable read(반복해서 read해도 같아야함)
+1) update만 막는다 공유lock
+2) select만 막는다 배타 lock
