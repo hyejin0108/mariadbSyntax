@@ -3,3 +3,11 @@
 
 mysqldump -u root -p --default-character-set=utf8 board > dumpfile.sql
 mysqldump -u root -p board -r dumpfile.sql
+
+# ubuntu
+sudo apt-get install mariadb-server
+sudo systemctl start mariadb
+sudo mariadb -u root -p
+sudo apt install git
+git clone ~~
+mysql -u root -p board < dumpfile.sql
